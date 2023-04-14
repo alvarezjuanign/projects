@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100vw;
+    background: linear-gradient(to right,#354770, #202e4f);
+}
+
+h1{
+    color: #FFF;
+    margin: 50px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-height: max-content;
+    min-width: 300px;
+    max-width: max-content;
+}
+
+.list-container{
+    height: 316px;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y proximity;
+}
+
+li{
+    padding: 5px;
+    text-align: start;
+    list-style: none;
+    cursor: pointer;
+    transition: .2s;
+    background: #232322;
+    margin: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.checked{
+    text-decoration: line-through;
+    filter: blur(1px);
+}
+
+#new-item{
+    padding: 5px;
+    background: inherit;
+    height: 30px;
+    border: none;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+#new-item::placeholder{
+    color: #FFF;
+}
+
+#new-item:hover{
+    border-bottom: 2px solid #FFF;
+}
+
+#new-item:focus{
+    outline: none;
+    border-bottom: 2px solid #FFF;
+}
+
+/* BUTTONS */
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    transition: .1s;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background: #E7B464;
+}
+
+.delete{
+    height: 20px;
+    width: 20px;
+    transition: .1s;
+    cursor: pointer;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    background: inherit;
+    color: #FFF;
+}
+
+.delete:hover{
+    background: #B2443E;
+}
+
+/* MODIFY SCROLLBAR FIREFOX*/
+*{
+    scrollbar-width: thin;
+    scrollbar-color: inherit #E7B464;
+}
+
+/* MODIFY SCROLLBAR CHROME EDGE SAFARI*/
+*::-webkit-scrollbar{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track{
+    background: inherit;
+}
+
+*::-webkit-scrollbar-thumb{
+    background: #E7B464;
+    border-radius: 20px;
+    border: #E7B464;
+}
