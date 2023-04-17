@@ -11,36 +11,32 @@
     <title>Portfolio WEB</title>
 </head>
 <body>
-<main class="main">
+<main class="w-full h-full">
     <!-- Inicio -->
-    <div class="menu" id="menu">
-        <div class="image">
-            <img src="/image.png" alt="Alvarez Juan" title="Alvarez Juan">
-        </div>
-        <div class="name">
-            <h1>Juan Ignacio Alvarez</h1>
-            <h2>Front End Developer Junior</h2>
-        </div>
-    </div>
+    <section class="flex flex-col sm:flex-row justify-center items-center m-4" id="menu">
+            <img src="/image.png" alt="Alvarez Juan" title="Alvarez Juan" class=" h-96 rounded-full">
+            <div class="flex flex-col m-2 font-bold text-lg">
+                <h1 class="text-center">Juan Ignacio Alvarez</h1>
+                <h2>Front End Developer Junior</h2>
+            </div>
+    </section>
 
     <!-- Proyectos -->
-    <section class="experiencia" id="experiencia">
-        <div class="about">
-            <p class="bg-violet-500">Soy Desarrollador web en formación. Estudiante de Lic. en 
+    <section class="flex flex-col justify-center items-center m-4">
+            <p>Soy Desarrollador web en formación. Estudiante de Lic. en 
             Ciencias de la Computación. 
             Organizado y responsable, con buenas relaciones 
             interpersonales.
             Capacidad de adaptación a cualquier situación o
             puesto de trabajo.
             </p>
-        </div>
-    
         
     <!-- SVG -->
     <h3 class="skills">HABILIDADES</h3>
-        <div class="icons">
+        <div class="flex flex-row gap-4 justify-center h-20 w-20 m-4">
             <img src="/html-5.png" alt="HTML" title="HTML">
             <img src="/css-3.png" alt="CSS" title="CSS">
+            <img src="/tailwind.png" alt="Tailwind" title="Tailwind">
             <img src="/js.png" alt="JS" title="JS">
         </div>
     </section>
