@@ -25,7 +25,7 @@ savedTasks.forEach(addUIItem)
 
 btn.addEventListener("click", () => {
     let txt = input.value
-    if (txt === "" || txt === ' ') {
+    if (txt === "" || txt === '') {
         alert("Please write something to do!")
     } else {
         savedTasks.push(txt);
@@ -34,9 +34,3 @@ btn.addEventListener("click", () => {
         input.value = ""
     }
 });
-
-list.addEventListener("click", (e) => {
-    if (e.target.tagName == "LI") {
-        e.target.classList.toggle("checked")
-    }
-})
