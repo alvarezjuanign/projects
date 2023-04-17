@@ -8,12 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/61e80cfa04.js" crossorigin="anonymous"></script>
-    <title>Portfolio WEB</title>
+    <title>Alvarez Juan Ignacio</title>
 </head>
-<body>
+<body class="box-border">
 <main class="w-full h-full">
-    <!-- Inicio -->
-    <section class="flex flex-col sm:flex-row justify-center items-center m-4" id="menu">
+
+    <section class="flex flex-col sm:flex-row justify-center items-center m-4 h-screen" id="menu">
             <img src="/image.png" alt="Alvarez Juan" title="Alvarez Juan" class=" h-96 rounded-full">
             <div class="flex flex-col m-2 font-bold text-lg">
                 <h1 class="text-center">Juan Ignacio Alvarez</h1>
@@ -21,31 +21,43 @@
             </div>
     </section>
 
-    <!-- Proyectos -->
     <section class="flex flex-col justify-center items-center m-4">
-            <p>Soy Desarrollador web en formación. Estudiante de Lic. en 
-            Ciencias de la Computación. 
-            Organizado y responsable, con buenas relaciones 
-            interpersonales.
-            Capacidad de adaptación a cualquier situación o
-            puesto de trabajo.
-            </p>
+            <p>Im Front End Developer</p>
         
-    <!-- SVG -->
-    <h3 class="skills">HABILIDADES</h3>
-        <div class="flex flex-row gap-4 justify-center h-20 w-20 m-4">
+    <h3 class="mt-24 font-extrabold text-4xl">SKILLS</h3>
+        <div class="flex flex-row gap-4 justify-center h-14 w-14 m-4">
             <img src="/html-5.png" alt="HTML" title="HTML">
             <img src="/css-3.png" alt="CSS" title="CSS">
-            <img src="/tailwind.png" alt="Tailwind" title="Tailwind">
             <img src="/js.png" alt="JS" title="JS">
+            <img src="/tailwind.png" alt="TAILWIND" title="TAILWIND">
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="contacto" id="contacto">
-            <div class="contact">
-                <ul>
-                    <li class="contact-item"><i class="fa-brands fa-github"></i><a class="link" href="https://github.com/alvarezjuanign">GitHub</a></li>
+    <article class="flex flex-col items-center m-14">
+        <h4 class="font-extrabold text-4xl m-3">PROJECTS</h4>
+        <section class="grid grid-flow-row gap-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            <div class="border-2 rounded-md text-center font-bold hover:shadow-2xl">
+                <a href="https://funny-cajeta-fb512d.netlify.app">
+                    <h5>CALCULATOR</h5>
+                    <img src="/calculator.png" class="p-2">
+                </a>
+                <h5 class="m-1">HTML CSS JS</h5>
+            </div>
+            <div class="border-2 rounded-md text-center font-bold hover:shadow-2xl">
+                <a href="https://funny-cendol-2a9daf.netlify.app">
+                    <h5>TO-DO LIST</h5>
+                    <img src="/todo.png" class="p-2">
+                </a>
+                <h5 class="m-1">HTML CSS JS</h5>
+            </div>
+        </section>
+    </article>
+
+    <footer class="bg-slate-400">
+            <div>
+                <ul class="flex flex-row justify-center">
+                    <li class="m-1.5"><i class="fa-brands fa-github"></i><a class="m-1" href="https://github.com/alvarezjuanign">GitHub</a></li>
+                    <li class="m-1.5"><i class="fa-brands fa-linkedin"></i><a class="m-1" href="https://www.linkedin.com/in/juanigz">LinkedIn</a></li>
                 </ul>
             </div>
     </footer>
