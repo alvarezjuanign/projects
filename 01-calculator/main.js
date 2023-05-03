@@ -9,7 +9,6 @@ const equal = document.querySelector('[equals]')
 const operator = document.querySelectorAll('[operator]')
 const numbers = document.querySelectorAll('[number]')
 
-
 class calculator{
     constructor(currentOperandText,previousOperandText){
         this.currentOperandText = currentOperandText
@@ -122,8 +121,6 @@ equal.addEventListener('click',()=>{
     Calculator.calculate()
     Calculator.displayUpdate()
 })
-
-
 
 // Event listeners keys
 window.addEventListener('keyup', (e)=>{
