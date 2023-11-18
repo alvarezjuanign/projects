@@ -1,0 +1,67 @@
+body{
+    font-family: system-ui, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    text-transform: capitalize;
+}
+
+.type{
+    text-transform: capitalize;
+}
+
+.infoCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 600px;
+}
+
+.imagePoke{
+    height: 300px;
+}
+
+.formCont{
+    display: flex;
+    justify-content: center;
+}
+
+.formSearch{
+    display: flex;
+    gap: 10px;
+}
+
+.inputSearch{
+    border: none;
+    border-bottom: #ce1d1d 2px solid;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.btnSearch{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background: #ce1d1d;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
