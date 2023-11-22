@@ -1,37 +1,40 @@
 const info = document.querySelector('.infoCont')
 const btn = document.querySelector('.btnSearch')
-const namePoke = document.querySelector('.name')
-const orderPoke = document.querySelector('.order')
-const typePoke = document.querySelector('.type')
+const input = document.querySelector('.inputSearch')
 
 const imagePoke = document.createElement('img')
 const divImage = document.createElement('div')
 
-async function fetchPokemon (pokemon) {
+const pokemonFetched = []
+
+async function fetchPokemon (random) {
   try {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${random}`)
     const data = await response.json()
 
-    const { name, id, types } = data
-    namePoke.textContent = name
-    orderPoke.textContent = `No. ${id}`
-    typePoke.textContent = types[0].type.name
-
     imagePoke.classList.add('imagePoke')
-    imagePoke.alt = `Photo of ${name}`
-    imagePoke.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+    imagePoke.alt = `Photo of pokemon ${data.name}`
+    imagePoke.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`
     divImage.appendChild(imagePoke)
     info.appendChild(divImage)
+
+    pokemonFetched.push(data.name)
   } catch (error) {
     console.log(error)
   }
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    if (input.value === pokemonFetched[0]) {
+      imagePoke.style.filter = 'blur(0)'
+    } else {
+      imagePoke.style.background = 'red'
+    }
+  })
 }
 
-btn.addEventListener('click', (e) => {
-  e.preventDefault()
-
-  const pokemon = document.querySelector('.inputSearch').value
-  if (pokemon === '' || pokemon.length < 3) return
-
-  fetchPokemon(pokemon)
+window.addEventListener('load', () => {
+  const random = Math.round(Math.random() * 930)
+  fetchPokemon(random)
 })
