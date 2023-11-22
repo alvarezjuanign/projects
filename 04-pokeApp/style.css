@@ -66,3 +66,33 @@ body{
         scale: 1.1;
     }
 }
+
+.correct {
+    filter: blur(0);
+}
+
+.correct {
+    opacity: 1;
+}
+
+.wrong {
+    animation: .2s linear 2 shake;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
