@@ -29,6 +29,7 @@ body{
 
 .imagePoke{
     height: 300px;
+    filter: blur(10px);
 }
 
 .formCont{
