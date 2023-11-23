@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/84424f6322.js" crossorigin="anonymous"></script>
     <script defer src="./scripts/main.js" type="module"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>PokeApp</title>
   </head>
   <body>
-    <h1><img src="https://fontmeme.com/permalink/231123/c98f24514af70b662be3d1c23e433270.png" alt="title of the page"></h1>
+    <h1>
+      <img class="title" src="https://fontmeme.com/permalink/231123/c98f24514af70b662be3d1c23e433270.png" alt="title of the page">
+    </h1>
     <main class="mainCont">
       <section class="info">
         <article class="infoCont">
           <h2 class="name"></h2>
-          <canvas id="target"></canvas>
         </article>
         <aside class="scoreboard">
           <div>
@@ -29,8 +31,8 @@
       <section class="formCont">
         <form class="formSearch">
           <input class="inputSearch" type="text" placeholder="Umbreon, Pikachu, Snorlax ...">
-          <input class="btnSearch" value="Check it !!" type="submit">
-          <button class="btnNext">Next</button>
+          <button class="btnSearch"><i class="fa-solid fa-check"></i></button>
+          <button class="btnNext"><i class="fa-solid fa-rotate-right"></i></button>
         </form>
       </section>
     </main>
