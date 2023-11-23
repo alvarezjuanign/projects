@@ -54,7 +54,7 @@ body{
     height: 400px;
 }
 
-.btnSearch{
+.btnSearch, .btnNext{
     border: none;
     padding: 10px;
     border-radius: 15px;
