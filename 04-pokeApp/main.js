@@ -2,6 +2,8 @@ const info = document.querySelector('.infoCont')
 const btn = document.querySelector('.btnSearch')
 const input = document.querySelector('.inputSearch')
 const pokemon = document.querySelector('.name')
+const score = document.querySelector('.score')
+const highScore = document.querySelector('.highScore')
 
 const imagePoke = document.createElement('img')
 const divImage = document.createElement('div')
@@ -33,32 +35,44 @@ async function fetchPokemon (random) {
 
 const newFetch = () => {
   const newRandom = Math.round(Math.random() * 898)
-  if (newRandom === random) {
-    newFetch()
-  }
+  if (newRandom === random) newFetch()
   fetchPokemon(newRandom)
 }
 
 btn.addEventListener('click', (e) => {
   e.preventDefault()
 
+  const parsedScore = parseInt(score.innerHTML)
+  const parsedHighScore = parseInt(highScore.innerHTML)
+
   if (input.value === pokemonFetched[0]) {
     imagePoke.classList.add('correct')
     pokemon.style.opacity = '1'
     input.value = ''
+    score.innerHTML = parsedScore + 1
 
     pokemonFetched = []
+
     setTimeout(() => {
       newFetch()
       imagePoke.classList.remove('correct')
-    }, 3000)
+    }, 2000)
   } else {
+    if (parsedScore > parsedHighScore) {
+      highScore.innerHTML = score.innerHTML
+    }
+
     imagePoke.classList.add('wrong')
+    pokemon.style.opacity = '1'
     input.value = ''
+    score.innerHTML = '0'
+
+    pokemonFetched = []
 
     setTimeout(() => {
+      newFetch()
       imagePoke.classList.remove('wrong')
-    }, 500)
+    }, 2000)
   }
 })
 
