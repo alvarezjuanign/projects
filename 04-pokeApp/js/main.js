@@ -4,6 +4,7 @@ const input = document.querySelector('.inputSearch')
 const pokemon = document.querySelector('.name')
 const score = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
+const nextPoke = document.querySelector('.btnNext')
 
 const imagePoke = document.createElement('img')
 const divImage = document.createElement('div')
@@ -74,6 +75,12 @@ btn.addEventListener('click', (e) => {
       imagePoke.classList.remove('wrong')
     }, 2000)
   }
+})
+
+nextPoke.addEventListener('click', (e) => {
+  e.preventDefault()
+  pokemonFetched = []
+  newFetch()
 })
 
 window.addEventListener('load', () => {
