@@ -4,78 +4,82 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.name{
-    text-transform: capitalize;
-    font-size: 32px;
+h1 {
+    text-align: center;
     margin: 0;
+    padding: 20px;
 }
 
-.infoCont{
+.title {
+    width: 300px;
+}
+
+.mainCont {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    min-height: 600px;
+    gap: 50px;
+    min-height: 500px;
 }
 
-.imagePoke{
-    height: 300px;
+.name {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.imagePoke {
+    height: 200px;
     filter: blur(10px);
+    padding-bottom: 30px;
+
+    transition: all .3s linear;
 }
 
-.formSearch{
+.scoreboard {
     display: flex;
-    gap: 10px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
-.inputSearch{
+.scoreboard div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.inputSearch {
     border: none;
     border-bottom: #ce1d1d 2px solid;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    width: 300px;
-
+    width: 200px;
+    margin-right: 10px;
+    
     &:focus{
         outline: none;
     }
 }
 
-#target {
-    position: absolute;
-    width: 300px;
-    height: 400px;
-}
-
-.btnSearch, .btnNext{
+.btnSearch, .btnNext {
     border: none;
     padding: 10px;
     border-radius: 15px;
     background: #ce1d1d;
-    font-size: 16px;
-    font-weight: 600;
-    color: #f2f2f2;
-    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+    font-weight: 900;
 
     &:hover{
         cursor: pointer;
-        scale: 1.1;
     }
 }
 
 .correct {
     filter: blur(0);
-}
-
-.correct {
-    opacity: 1;
 }
 
 .wrong {
@@ -84,40 +88,19 @@ body{
 }
 
 @keyframes shake {
-    0% {
+    0%{
         transform: translateX(0);
     }
-    25% {
+    25%{
         transform: translateX(10px);
     }
-    50% {
+    50%{
         transform: translateX(-10px);
     }
-    75% {
+    75%{
         transform: translateX(10px);
     }
-    100% {
+    100%{
         transform: translateX(0);
     }
-}
-
-.scoreboard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.scoreboard div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.info {
-    position: relative;
 }
