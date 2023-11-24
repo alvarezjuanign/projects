@@ -24,7 +24,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -45,11 +45,21 @@ h1 {
     width: 30px;
 }
 
+.infoCont {
+    min-height: 400px;
+}
+
 .imagePoke {
     height: 300px;
     filter: blur(10px);
 
     transition: all .3s linear;
+}
+
+.gameOver {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .scoreboard {
@@ -65,7 +75,14 @@ h1 {
     align-items: center;
 }
 
-.inputSearch {
+.formQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.inputText {
     border: none;
     border-bottom: #ce1d1d 2px solid;
     padding: 10px;
@@ -79,13 +96,15 @@ h1 {
     }
 }
 
-.btnSearch, .btnNext {
+.btnCheck, .btnRestart, .btnRoll {
     border: none;
-    padding: 10px;
     border-radius: 15px;
     background: #ce1d1d;
     font-size: 14px;
     font-weight: 900;
+    width: 40px;
+    font-size: 15px;
+    padding: 10px;
 
     &:hover{
         cursor: pointer;
@@ -124,42 +143,39 @@ h1 {
         width: 500px;
     }
     .imagePoke {
-        height: 500px;
+        height: 400px;
     }
     .scoreboard {
         font-size: 24px;
     }
-    .inputSearch {
+    .inputText {
         width: 400px;
-        height: 50px;
         font-size: 24px;
     }
-    .btnSearch, .btnNext {
-        font-size: 24px;
+    .btnRestart, .btnCheck, .btnRoll {
+        width: 50px;
+        font-size: 20px;
+        padding: 10px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .title {
-            width: 700px;
-        }
-    
-        .imagePoke {
-            height: 600px;
-        }
-    
-        .scoreboard {
-            font-size: 24px;
-        }
-    
-        .inputSearch {
-            width: 400px;
-            height: 50px;
-            font-size: 24px;
-        }
-    
-        .btnSearch,
-        .btnNext {
-            font-size: 24px;
-        }
+        width: 700px;
+    }
+    .imagePoke {
+        height: 400px;
+    }
+    .scoreboard {
+        font-size: 24px;
+    }
+    .inputText {
+        width: 400px;
+        font-size: 24px;
+    }
+    .btnCheck, .btnRestart, .btnRoll {
+        width: 50px;
+        font-size: 24px;
+        padding: 10px;
+    }
 }
