@@ -95,7 +95,7 @@ const endGame = () => {
 const createHearts = () => {
   for (let i = 0; i < 3; i++) {
     const heart = document.createElement('img')
-    heart.src = '../assets/heart.svg'
+    heart.src = 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1700865379/a2blyurh74do4fzboewe.svg'
     heart.classList.add('heart')
     lifes.appendChild(heart)
   }
