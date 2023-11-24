@@ -25,12 +25,24 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .name {
     text-transform: capitalize;
     text-align: center;
+}
+
+.lifeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+}
+
+.heart {
+    width: 30px;
 }
 
 .imagePoke {
