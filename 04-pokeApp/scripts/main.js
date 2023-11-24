@@ -5,6 +5,7 @@ const pokemon = document.querySelector('.name')
 const score = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
 const nextPoke = document.querySelector('.btnNext')
+const lifes = document.querySelector('.lifeContainer')
 
 const imagePoke = document.createElement('img')
 const divImage = document.createElement('div')
@@ -52,6 +53,7 @@ btn.addEventListener('click', (e) => {
     input.value = ''
     score.innerHTML = parsedScore + 1
 
+    console.log(pokemonFetched[0])
     pokemonFetched = []
 
     setTimeout(() => {
@@ -67,6 +69,8 @@ btn.addEventListener('click', (e) => {
     pokemon.style.opacity = '1'
     input.value = ''
     score.innerHTML = '0'
+
+    lifes.removeChild(lifes.lastElementChild)
 
     pokemonFetched = []
 
@@ -85,4 +89,11 @@ nextPoke.addEventListener('click', (e) => {
 
 window.addEventListener('load', () => {
   fetchPokemon(random)
+
+  for (let i = 0; i < 3; i++) {
+    const heart = document.createElement('img')
+    heart.src = '../assets/heart.svg'
+    heart.classList.add('heart')
+    lifes.appendChild(heart)
+  }
 })
