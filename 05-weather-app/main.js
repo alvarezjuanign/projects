@@ -8,6 +8,21 @@ const pressure = document.querySelector('.pressure')
 const API_KEY = '979046cf3730ad09da6a2e07f6b018db'
 
 const getWeather = (city) => {
+  if (city === '') return
+
+  if (city.length < 3) {
+    inputWeather.classList.add('error')
+
+    setTimeout(() => {
+      inputWeather.classList.remove('error')
+    }, 1000)
+    return
+  }
+
+  if (inputWeather.classList.contains('error')) {
+    inputWeather.classList.remove('error')
+  }
+
   try {
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`)
       .then(res => res.json())
@@ -22,11 +37,11 @@ const getWeather = (city) => {
           })
       })
   } catch (error) {
+    inputWeather.classList.add('error')
     console.log(error)
   }
 }
 
-btnWeather.addEventListener('click', getWeather())
 btnWeather.addEventListener('click', () => {
   const city = inputWeather.value
   getWeather(city)
