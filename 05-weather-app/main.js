@@ -10,7 +10,7 @@ const API_KEY = '979046cf3730ad09da6a2e07f6b018db'
 const getWeather = (city) => {
   if (city === '') return
 
-  if (city.length < 3) {
+  if (city.length <= 3) {
     inputWeather.classList.add('error')
 
     setTimeout(() => {
@@ -37,7 +37,6 @@ const getWeather = (city) => {
           })
       })
   } catch (error) {
-    inputWeather.classList.add('error')
     console.log(error)
   }
 }
