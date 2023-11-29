@@ -1,17 +1,37 @@
 const btnWeather = document.querySelector('.btnWeather')
 const inputWeather = document.querySelector('.inputWeather')
+const nameCity = document.querySelector('.city')
+const temperature = document.querySelector('.temperature')
+const humidity = document.querySelector('.humidity')
+const pressure = document.querySelector('.pressure')
 
 const API_KEY = '979046cf3730ad09da6a2e07f6b018db'
-const WEATHER = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`
-const GEO = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`
 
-const city = inputWeather.value
-
-const getWeather = async () => {
-  const res = await fetch(GEO)
-  const data = await res.json()
-
-  console.log(data)
+const getWeather = (city) => {
+  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${data[0].lat}&lon=${data[0].lon}&units=metric&appid=${API_KEY}`)
+        .then(response => response.json())
+        .then(weather => {
+          nameCity.textContent = data[0].name
+          temperature.textContent = Math.round(weather.current.temp) + ' °C'
+          humidity.textContent = 'Humidity: ' + weather.current.humidity + ' %'
+          pressure.textContent = 'Pressure: ' + weather.current.pressure + ' hPa'
+        })
+    })
 }
 
-btnWeather.addEventListener('click', getWeather())
+btnWeather.addEventListener('click', () => {
+  const city = inputWeather.value
+  getWeather(city)
+  inputWeather.value = ''
+})
+
+window.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    const city = inputWeather.value
+    getWeather(city)
+    inputWeather.value = ''
+  }
+})
