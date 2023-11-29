@@ -1,13 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/main.js"></script>
+    <title>Weather App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <main class="main-container">
+      <div class="weather"></div>
+      <h1>WEATHER APP</h1>
+      <h2 class="city"></h2>
+      <p class="temperature"></p>
+      <div class="weather">
+        <p class="humidity"></p>
+        <p class="pressure"></p>
+      </div>
+      <input
+        class="inputWeather"
+        type="text"
+        placeholder="Buenos Aires, Madrid, etc..." />
+      <button class="btnWeather">Get weather</button>
+    </main>
   </body>
 </html>
