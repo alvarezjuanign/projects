@@ -10,6 +10,7 @@ body {
 
 h1 {
   border-bottom: 2px solid rgb(0, 54, 247);
+  margin: 0;
 }
 
 .main-container {
@@ -30,7 +31,7 @@ h1 {
 .temperature {
   font-size: 90px;
   font-weight: 900;
-  margin: -20px;
+  margin: 0;
 }
 
 .weather {
