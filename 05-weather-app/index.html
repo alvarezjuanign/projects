@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <script defer src="/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet" />
     <title>Weather App</title>
   </head>
   <body>
@@ -21,17 +26,23 @@
           <span>°F</span>
         </div>
       </div>
-      <h2 class="city"></h2>
-      <p class="temperature"></p>
-      <div class="weather">
-        <p class="humidity"></p>
-        <p class="pressure"></p>
+      <section class="forecast">
+        <h2 class="city"></h2>
+        <p class="temperature"></p>
+        <div class="weather">
+          <p class="humidity"></p>
+          <p class="pressure"></p>
+        </div>
+      </section>
+      <div class="searchbar">
+        <input
+          class="inputWeather"
+          type="text"
+          placeholder="Buenos Aires, Madrid, etc..." />
+        <button class="btnWeather">
+          <img src="./public/search.svg" />
+        </button>
       </div>
-      <input
-        class="inputWeather"
-        type="text"
-        placeholder="Buenos Aires, Madrid, etc..." />
-      <button class="btnWeather">Get weather</button>
     </main>
   </body>
 </html>
