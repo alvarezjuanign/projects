@@ -139,9 +139,6 @@ h1 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .title {
-        width: 500px;
-    }
     .infoCont {
         min-height: 500px;
     }
@@ -164,13 +161,16 @@ h1 {
 
 @media screen and (min-width: 1024px) {
     .title {
-        width: 700px;
+        width: 500px;
     }
     .infoCont {
         min-height: 500px;
     }
     .imagePoke {
         height: 400px;
+    }
+    .lifeContainer {
+        left: 200px;
     }
     .scoreboard {
         font-size: 24px;
